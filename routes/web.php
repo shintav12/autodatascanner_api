@@ -17,7 +17,9 @@ Route::group(['prefix' => 'api'], function (){
         Route::get('/{brand_id}/{year}/{model}','CarController@getEngine')->middleware("cors");
         Route::get('/{brand_id}/{year}/{model}/{engine}','CarController@getCar')->middleware("cors");
     });
-
-    Route::get('/case','CarController@getCase')->middleware("cors");
+    Route::group(['prefix' => '/case'], function (){
+        Route::get('','CarController@getCase')->middleware("cors");
+    });
+    
 });
 
