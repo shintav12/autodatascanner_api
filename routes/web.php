@@ -3,6 +3,7 @@
 Route::group(['prefix' => 'api'], function (){
     Route::group(['prefix' => '/brands'], function (){
         Route::get('/','BrandController@get')->middleware('cors');
+        Route::get('/case','BrandController@getCase')->middleware('cors');
     });
 
     Route::group(['prefix' => '/systems'], function (){
