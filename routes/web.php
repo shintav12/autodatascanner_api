@@ -4,8 +4,8 @@ Route::group(['prefix' => 'api'], function (){
     Route::group(['prefix' => '/brands'], function (){
         Route::get('/','BrandController@get')->middleware('cors');
         Route::get('/case','BrandController@getCase')->middleware('cors');
-        Route::get('options/{father_slug?}/{system_id?}','SystemController@Options')->middleware('cors');
-        Route::get('option/{slug}','SystemController@father')->middleware('cors');
+        Route::get('options/{father_slug?}/{system_id?}','BrandController@Options')->middleware('cors');
+        Route::get('option/{slug}','BrandController@father')->middleware('cors');
     });
 
     Route::group(['prefix' => '/systems'], function (){
