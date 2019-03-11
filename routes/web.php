@@ -18,7 +18,7 @@ Route::group(['prefix' => 'api'], function (){
         Route::get('/{brand_id}/{year}/{model}/{engine}','CarController@getCar');
     });
     Route::group(['prefix' => '/case'], function (){
-        Route::get('','CarController@getCase');
+        Route::get('/','CarController@getCase');
     });
     
 });
