@@ -8,6 +8,7 @@ class Cors2
 {
     private static $allowedOriginsWhitelist = [
         'http://localhost:8000',
+        'http://www.cms.nezkastudios.com',
         'http://www.cms.nezkastudios.com'
     ];
 
